@@ -1,0 +1,108 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@theme inline {
+  /* Color Tokens */
+  --color-background: var(--color-neutral-950);
+  --color-foreground: var(--color-white);
+  --color-card: var(--color-neutral-900);
+  --color-card-foreground: var(--color-white);
+  --color-popover: var(--color-neutral-900);
+  --color-popover-foreground: var(--color-white);
+  --color-primary: var(--color-violet-600);
+  --color-primary-foreground: var(--color-violet-50);
+  --color-secondary: var(--color-zinc-100);
+  --color-secondary-foreground: var(--color-zinc-900);
+  --color-muted: var(--color-neutral-100);
+  --color-muted-foreground: var(--color-neutral-500);
+  --color-accent: var(--color-neutral-100);
+  --color-accent-foreground: var(--color-neutral-900);
+  --color-destructive: var(--color-red-400);
+  --color-border: var(--color-neutral-700);
+  --color-input: var(--color-neutral-800);
+  --color-ring: var(--color-neutral-400);
+  --color-chart-1: var(--color-purple-400);
+  --color-chart-2: var(--color-purple-500);
+  --color-chart-3: var(--color-purple-600);
+  --color-chart-4: var(--color-purple-700);
+  --color-chart-5: var(--color-purple-800);
+  --color-sidebar: var(--color-neutral-50);
+  --color-sidebar-foreground: var(--color-neutral-950);
+  --color-sidebar-primary: var(--color-violet-600);
+  --color-sidebar-primary-foreground: var(--color-violet-50);
+  --color-sidebar-accent: var(--color-neutral-100);
+  --color-sidebar-accent-foreground: var(--color-neutral-900);
+  --color-sidebar-border: var(--color-neutral-200);
+  --color-sidebar-ring: var(--color-neutral-400);
+  --color-good: var(--color-green-400);
+  --color-warning: var(--color-amber-400);
+  /* Other Tokens */
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-sans);
+  --font-heading: var(--font-heading);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+  /* Custom Tokens */
+  --text-level-1: clamp(1.35rem, 1.167rem + 0.8133vw, 1.6875rem);
+  --text-level-2: clamp(1.62rem, 1.1259rem + 2.1958vw, 2.5313rem);
+  --text-level-3: clamp(1.944rem, 0.9394rem + 4.4648vw, 3.7969rem);
+}
+
+:root {
+  --radius: 0.625rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply h-full;
+    color-scheme: dark only;
+    font-size: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-full font-sans bg-background text-foreground antialiased text-lg;
+  }
+
+  abbr {
+    @apply no-underline;
+  }
+}
+
+@utility wrapper {
+  @apply p-6 inline-full mx-auto max-inline-240;
+}
+
+@utility trim {
+  text-box: trim-both cap alphabetic;
+}
+
+@utility legible {
+  text-rendering: optimizeLegibility;
+}
+
+@utility type-heading {
+  @apply font-sans font-bold text-level-1 trim;
+}
+
+@utility type-title {
+  @apply font-heading font-normal text-level-2 trim;
+}
+
+@utility type-display {
+  @apply font-heading font-normal text-level-3 trim;
+}
+
+@utility type-copy {
+  @apply font-sans font-normal leading-relaxed legible;
+}
