@@ -1,7 +1,7 @@
 // Ours
 import { Abbreviate } from "@/components/abbreviate";
 import { TextLink } from "@/components/text-link";
-import { Id } from "@/constants";
+import { GITHUB, Id } from "@/constants";
 import { heading } from "@/content/copy";
 
 export function About() {
@@ -52,7 +52,7 @@ export function About() {
         <p className="type-copy">
           This is a work in progress &mdash; I will be constantly adding artists (there are so
           many). Please bare with me. Feel free to open an issue on GitHub to request an artist to
-          be added or if you’ve found a bug: <TextLink href="#">here</TextLink>
+          be added or if you’ve found a bug: <TextLink href={GITHUB}>here</TextLink>
         </p>
       </div>
     </section>

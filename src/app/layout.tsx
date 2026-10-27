@@ -1,5 +1,5 @@
 // Theirs
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 
 // Ours
@@ -31,6 +31,10 @@ export const metadata: Metadata = {
   metadataBase: Path.HOME.origin,
   title: metaData.title,
   description: metaData.description,
+};
+
+export const viewport: Viewport = {
+  themeColor: "#000",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -16,3 +16,4 @@ export const Path = {
 } as const;
 
 export const PAGE_SIZE = 12;
+export const GITHUB = "https://github.com/dmbdesignpdx/noise-against-hate";
