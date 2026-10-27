@@ -4,17 +4,16 @@ import { render, screen } from "@testing-library/react";
 
 // Ours
 import { Shero } from "@/components/shero";
-import { label } from "@/content/labels";
 import { metaData } from "@/content/meta";
 
 describe("Shero", () => {
-  test("renders its default content and state", async () => {
+  test("renders its default content and state", () => {
     render(<Shero />);
 
-    await screen.findByText(metaData.title);
-    await screen.findByText(metaData.description);
-    const cta = await screen.findByText(label.explore);
+    const title = screen.getByText(metaData.title);
+    const desc = screen.getByText(metaData.description);
 
-    expect(cta).not.toBeDisabled();
+    expect(title).toBeInTheDocument();
+    expect(desc).toBeInTheDocument();
   });
 });

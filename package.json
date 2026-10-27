@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write",
+    "test": "bun test --changed",
+    "test:watch": "bun test --watch",
     "comp": "bun -b run ./scripts/create-component"
   },
   "dependencies": {

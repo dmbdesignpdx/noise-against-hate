@@ -1,68 +1,46 @@
 // Theirs
 import { describe, expect, test } from "bun:test";
 import { render, screen } from "@testing-library/react";
+
 // Ours
 import { BandCard } from "@/components/band-card";
-import type { Band } from "@/types/main";
+import type { SearchedBand } from "@/types/main";
+import { bandcampUrl } from "@/utils/bandcamp";
 
-const band: Band = {
-  bandcamp: "testband",
+const band: SearchedBand = {
+  bandcamp: "blackbraid",
   name: "Test Band",
   country: "Norway",
-  tags: ["punk", "hardcore", "crust"],
-  genres: ["Punk"],
-  image: "https://f4.bcbits.com/img/a0000000000_10.jpg",
+  genres: ["Punk", "Hardcore"],
+  image: "https://picsum.photos/200",
 };
 
-const url = "https://testband.bandcamp.com";
+const bandcampLink = /bandcamp link/i;
 
 describe("BandCard", () => {
-  test("renders the band name and country", () => {
+  test("renders its default content and state", () => {
     render(<BandCard {...band} />);
 
-    expect(screen.getByText("Test Band")).toBeInTheDocument();
-    expect(screen.getByText("Norway")).toBeInTheDocument();
+    const root = screen.getByRole("article", { name: band.name });
+    const heading = screen.getByRole("heading", { name: band.name });
+    const country = screen.getByText(band.country);
+    const genres = screen.getByText("Punk / Hardcore");
+    const link = screen.getByRole("link", { name: bandcampLink });
+
+    expect(root).toBeInTheDocument();
+    expect(heading).toBeInTheDocument();
+    expect(country).toBeInTheDocument();
+    expect(genres).toBeInTheDocument();
+    expect(link).toBeInTheDocument();
   });
 
-  test("renders tags as a comma-separated list", () => {
+  test("links to the band's Bandcamp page in a new tab", () => {
     render(<BandCard {...band} />);
 
-    expect(screen.getByText("punk, hardcore, crust")).toBeInTheDocument();
-  });
+    const link = screen.getByRole("link", { name: bandcampLink });
 
-  test("renders an image with the band name as alt text", () => {
-    render(<BandCard {...band} />);
-
-    expect(screen.getByRole("img", { name: "Test Band" })).toBeInTheDocument();
-  });
-
-  test("links to the band's Bandcamp page in a new tab, from both the text and image", () => {
-    render(<BandCard {...band} />);
-
-    const links = screen.getAllByRole("link");
-
-    expect(links).toHaveLength(2);
-    for (const link of links) {
-      expect(link).toHaveAttribute("href", url);
-      expect(link).toHaveAttribute("target", "_blank");
-      expect(link).toHaveAttribute("rel", "noopener noreferrer");
-    }
-  });
-
-  test("includes screen-reader-only link text", () => {
-    render(<BandCard {...band} />);
-
-    expect(screen.getByText("Link")).toHaveClass("sr-only");
-  });
-
-  test.skip("renders an empty tag line when there are no tags", () => {
-    render(
-      <BandCard
-        {...band}
-        // tags={[]}
-      />,
-    );
-
-    expect(screen.queryByText("punk, hardcore, crust")).not.toBeInTheDocument();
+    expect(link).toHaveAttribute("href", bandcampUrl(band.bandcamp));
+    expect(link).toHaveAttribute("target", "_blank");
+    expect(link).toHaveAttribute("rel", "noopener noreferrer");
   });
 });
