@@ -18,25 +18,28 @@ export async function BandList() {
   }
 
   return (
-    <dl className="columns-2 mbs-8">
-      {data.map(item => (
-        <div
-          key={item.bandcamp}
-          className="break-inside-avoid mbe-8"
-        >
-          <dt className="text-xl">
-            <a
-              className="text-purple-400 hover:underline"
-              href={bandcampUrl(item.bandcamp)}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {item.name}
-            </a>
-          </dt>
-          <dd className="text-sm mbs-1">{item.genres.join(" / ")}</dd>
-        </div>
-      ))}
-    </dl>
+    <div className="">
+      <p>{data.length} Artists:</p>
+      <dl className="columns-2 mbs-8">
+        {data.map(item => (
+          <div
+            key={item.bandcamp}
+            className="break-inside-avoid mbe-8"
+          >
+            <dt className="text-xl">
+              <a
+                className="text-purple-400 hover:underline"
+                href={bandcampUrl(item.bandcamp)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {item.name}
+              </a>
+            </dt>
+            <dd className="text-sm mbs-1">{item.genres.join(" / ")}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
   );
 }

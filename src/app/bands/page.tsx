@@ -23,9 +23,9 @@ function BackLink() {
 
 export default function Bands() {
   return (
-    <div className="wrapper min-block-[80svh] flex flex-col gap-6">
-      <h1 className="type-heading">{body.artistList}</h1>
+    <div className="wrapper min-block-[80svh] flex flex-col gap-10">
       <BackLink />
+      <h1 className="type-heading mbs-4">{body.artistList}</h1>
       <Suspense fallback={<InfoBlock loading={true} />}>
         <BandList />
         <BackLink />

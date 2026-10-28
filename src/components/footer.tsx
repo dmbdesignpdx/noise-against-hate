@@ -21,17 +21,15 @@ export function Footer() {
     <footer className="bg-card py-12 [content-visibility:auto] [contain-intrinsic-size:auto_300px]">
       <div className="wrapper grid grid-cols-1 md:grid-cols-2 gap-4">
         <p className="md:col-[1/2]">{footer.author}</p>
-        <address className="md:col-[1/2] md:row-[2/3] not-italic">
-          <p className="flex flex-col items-start">
-            {links.map(link => (
-              <TextLink
-                key={link.url}
-                href={link.url}
-              >
-                {link.label}
-              </TextLink>
-            ))}
-          </p>
+        <address className="flex flex-col items-start md:col-[1/2] md:row-[2/3] not-italic">
+          {links.map(link => (
+            <TextLink
+              key={link.url}
+              href={link.url}
+            >
+              {link.label}
+            </TextLink>
+          ))}
         </address>
         <p className="md:col-[1/2] md:row-[3/4]">
           <small>{footer.copyright(year)}</small>

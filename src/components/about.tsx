@@ -26,28 +26,32 @@ export function About() {
           searchable collection of bands that one could discover and feel good about listening to
           them… so here it is!
         </p>
-        <p className="type-copy">
-          <dfn>Satan Not Hatin'</dfn> is a campaign operated by Global Order of Satan to promote
-          metal, alt, punk, industrial, neofolk, and goth artists, organizations, and venues that
-          reject hate, discrimination, and far-right influences.
-        </p>
-        <p className="-mbs-4">
-          <TextLink href="https://www.instagram.com/s8nnoth8n">s8nnoth8n on Instagram</TextLink>
-        </p>
-        <p className="type-copy">
-          <dfn>Antifascist Black Metal Network</dfn> is an online platform and anti-authoritarian
-          community that opposes racism, sexism, homophobia, transphobia, ableism, and all forms of
-          oppression within the extreme metal scene.
-        </p>
-        <p className="-mbs-4">
-          <TextLink href="https://www.facebook.com/antifascistbmnetwork">
-            <Abbreviate
-              text="Antifascist Black Metal Network"
-              using="ABMN"
-              withSuffix=" on Facebook"
-            />
-          </TextLink>
-        </p>
+        <aside>
+          <p className="type-copy">
+            <dfn>Satan Not Hatin'</dfn> is a campaign operated by Global Order of Satan to promote
+            metal, alt, punk, industrial, neofolk, and goth artists, organizations, and venues that
+            reject hate, discrimination, and far-right influences.
+          </p>
+          <p>
+            <TextLink href="https://www.instagram.com/s8nnoth8n">s8nnoth8n on Instagram</TextLink>
+          </p>
+        </aside>
+        <aside>
+          <p className="type-copy">
+            <dfn>Antifascist Black Metal Network</dfn> is an online platform and anti-authoritarian
+            community that opposes racism, sexism, homophobia, transphobia, ableism, and all forms
+            of oppression within the extreme metal scene.
+          </p>
+          <p className="">
+            <TextLink href="https://www.facebook.com/antifascistbmnetwork">
+              <Abbreviate
+                text="Antifascist Black Metal Network"
+                using="ABMN"
+                withSuffix=" on Facebook"
+              />
+            </TextLink>
+          </p>
+        </aside>
         <hr className="my-6" />
         <p className="type-copy">
           This is a work in progress &mdash; I will be constantly adding artists (there are so

@@ -1,6 +1,9 @@
 "use client";
 
+// Theirs
 import { GradFlow } from "gradflow";
+
+// Ours
 import { getHexColor } from "@/utils/colors";
 
 export function BgTexture() {
