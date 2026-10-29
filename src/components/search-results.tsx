@@ -3,6 +3,7 @@ import { useRef } from "react";
 
 // Ours
 import { BandCard } from "@/components/band-card";
+import { CardSkeleton } from "@/components/card-skeleton";
 import type { SearchState } from "@/components/search-body";
 import {
   Pagination,
@@ -15,6 +16,8 @@ import {
 import { PAGE_SIZE } from "@/constants";
 import { heading } from "@/content/copy";
 import { label } from "@/content/labels";
+import { createIdArray } from "@/lib/array";
+import { cn } from "@/lib/utils";
 
 interface Props {
   state: SearchState;
@@ -22,6 +25,8 @@ interface Props {
   page: number;
   setPage: (n: number) => void;
 }
+
+const skeletons = createIdArray(3, "skull");
 
 export function SearchResults({ state, loading, page, setPage }: Props) {
   // State
@@ -49,12 +54,16 @@ export function SearchResults({ state, loading, page, setPage }: Props) {
     <>
       <section
         ref={$list}
-        className="contain-layout grid mbs-8 grid-cols-1 md:grid-cols-3 auto-rows-max gap-6 scroll-mbs-8 min-block-[60svh]"
+        className={cn(
+          "contain-layout grid mbs-8 grid-cols-1 md:grid-cols-3 auto-rows-max gap-6 scroll-mbs-8 min-block-[60svh]",
+          loading && "min-block-svh",
+        )}
         aria-live="polite"
         aria-busy={loading ? "true" : "false"}
         aria-atomic="false"
       >
         <h2 className="sr-only">{heading.results}</h2>
+        {loading && !bands && skeletons.map(id => <CardSkeleton key={id} />)}
         {bands &&
           bands.length > 0 &&
           visible.map(b => (
