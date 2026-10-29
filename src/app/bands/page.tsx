@@ -6,7 +6,7 @@ import { Suspense } from "react";
 import { BandList } from "@/components/band-list";
 import { InfoBlock } from "@/components/info-block";
 import { buttonVariants } from "@/components/ui/button";
-import { body } from "@/content/copy";
+import { heading } from "@/content/copy";
 import { label } from "@/content/labels";
 import { cn } from "@/lib/utils";
 
@@ -25,7 +25,7 @@ export default function Bands() {
   return (
     <div className="wrapper min-block-[80svh] flex flex-col gap-10">
       <BackLink />
-      <h1 className="type-heading mbs-4">{body.artistList}</h1>
+      <h1 className="type-heading mbs-4">{heading.artists}</h1>
       <Suspense fallback={<InfoBlock loading={true} />}>
         <BandList />
         <BackLink />

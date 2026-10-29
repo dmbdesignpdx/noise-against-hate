@@ -15,7 +15,7 @@ export async function getBands(raw: string): Promise<PostgrestSingleResponse<Sea
 
   const base = await supabase
     .from("bands")
-    .select("bandcamp, name, country, image, genres")
+    .select("bandcamp, name, country, image, genres, id")
     .contains("tags", [...tags])
     .order("name", { ascending: true });
 

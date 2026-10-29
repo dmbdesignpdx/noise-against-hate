@@ -10,7 +10,7 @@ import type { ListedBand } from "@/types/main";
 export async function getAllBands(): Promise<PostgrestSingleResponse<ListedBand[]>> {
   const base = await supabase
     .from("bands")
-    .select("bandcamp, name, genres")
+    .select("bandcamp, name, genres, id")
     .order("name", { ascending: true });
 
   return base;

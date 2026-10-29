@@ -13,6 +13,7 @@ const band: SearchedBand = {
   country: "Norway",
   genres: ["Punk", "Hardcore"],
   image: "https://picsum.photos/200",
+  id: 1,
 };
 
 const bandcampLink = /bandcamp link/i;

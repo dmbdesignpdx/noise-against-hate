@@ -14,13 +14,13 @@ import {
 import type { SearchedBand } from "@/types/main";
 import { bandcampUrl } from "@/utils/bandcamp";
 
-export function BandCard({ bandcamp, name, country, image, genres }: SearchedBand) {
+export function BandCard({ bandcamp, name, country, image, genres, id }: SearchedBand) {
   return (
     <Card aria-labelledby={bandcamp}>
       <CardHeader>
         <CardTitle>
           <h3
-            id={bandcamp}
+            id={bandcamp + id}
             className="text-lg -mbs-1"
           >
             {name}

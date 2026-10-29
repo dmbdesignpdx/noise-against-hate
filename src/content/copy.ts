@@ -18,4 +18,6 @@ export const body = {
 export const heading = {
   results: "Search Results",
   about: "About This Project",
+  artists: "Full List (So Far)",
+  totalArtists: (total: number) => `${total} Artists`,
 };

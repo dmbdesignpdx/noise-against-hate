@@ -51,7 +51,18 @@
     "enabled": true,
     "actions": {
       "source": {
-        "organizeImports": "on"
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              [":PACKAGE:", "!@/**", ":BUN:", ":NODE:"],
+              ":BLANK_LINE:",
+              "@/**",
+              ":BLANK_LINE:",
+              [":ALIAS:", ":PATH:"]
+            ]
+          }
+        }
       }
     }
   }

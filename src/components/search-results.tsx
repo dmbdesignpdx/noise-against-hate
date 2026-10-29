@@ -68,7 +68,7 @@ export function SearchResults({ state, loading, page, setPage }: Props) {
           bands.length > 0 &&
           visible.map(b => (
             <BandCard
-              key={b.bandcamp}
+              key={b.bandcamp + b.id}
               {...b}
             />
           ))}

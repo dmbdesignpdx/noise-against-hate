@@ -1,12 +1,13 @@
-// Ours
 import { About } from "@/components/about";
+import { Callout } from "@/components/callout";
 import { Search } from "@/components/search";
 
-export default async function Home() {
+export default function Home() {
   return (
     <>
       <Search />
       <About />
+      <Callout />
     </>
   );
 }

@@ -1,5 +1,6 @@
 export interface Band {
-  bandcamp: string; // Key
+  id: number; // Key
+  bandcamp: string;
   name: string;
   country: string;
   tags: string[];

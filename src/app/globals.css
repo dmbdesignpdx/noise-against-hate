@@ -10,8 +10,8 @@
   --color-card-foreground: var(--color-white);
   --color-popover: var(--color-neutral-900);
   --color-popover-foreground: var(--color-white);
-  --color-primary: var(--color-violet-600);
-  --color-primary-foreground: var(--color-violet-50);
+  --color-primary: var(--color-purple-500);
+  --color-primary-foreground: var(--color-purple-50);
   --color-secondary: var(--color-zinc-100);
   --color-secondary-foreground: var(--color-zinc-900);
   --color-muted: var(--color-neutral-100);
@@ -29,8 +29,8 @@
   --color-chart-5: var(--color-purple-800);
   --color-sidebar: var(--color-neutral-50);
   --color-sidebar-foreground: var(--color-neutral-950);
-  --color-sidebar-primary: var(--color-violet-600);
-  --color-sidebar-primary-foreground: var(--color-violet-50);
+  --color-sidebar-primary: var(--color-purple-600);
+  --color-sidebar-primary-foreground: var(--color-purple-50);
   --color-sidebar-accent: var(--color-neutral-100);
   --color-sidebar-accent-foreground: var(--color-neutral-900);
   --color-sidebar-border: var(--color-neutral-200);
@@ -49,9 +49,7 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
   /* Custom Tokens */
-  --text-level-1: clamp(1.35rem, 1.167rem + 0.8133vw, 1.6875rem);
-  --text-level-2: clamp(1.62rem, 1.1259rem + 2.1958vw, 2.5313rem);
-  --text-level-3: clamp(1.944rem, 0.9394rem + 4.4648vw, 3.7969rem);
+  --text-clamp: clamp(1.944rem, 0.9394rem + 4.4648vw, 3.7969rem);
 }
 
 :root {
@@ -92,15 +90,15 @@
 }
 
 @utility type-heading {
-  @apply font-sans font-bold text-level-1 trim;
+  @apply font-sans font-bold text-3xl trim;
 }
 
 @utility type-title {
-  @apply font-heading font-normal text-level-2 trim;
+  @apply font-heading font-normal text-4xl trim;
 }
 
 @utility type-display {
-  @apply font-heading font-normal text-level-3 trim;
+  @apply font-heading font-normal text-clamp trim;
 }
 
 @utility type-copy {
