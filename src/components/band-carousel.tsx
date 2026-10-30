@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-import { TextLink } from "@/components/text-link";
 import {
   Carousel,
   type CarouselApi,
@@ -11,7 +10,8 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
+} from "ui/carousel";
+import { TextLink } from "@/components/text-link";
 import type { SearchedBand } from "@/types/main";
 import { bandcampUrl } from "@/utils/bandcamp";
 

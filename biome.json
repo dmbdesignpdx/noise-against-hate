@@ -55,9 +55,9 @@
           "level": "on",
           "options": {
             "groups": [
-              [":PACKAGE:", "!@/**", ":BUN:", ":NODE:"],
+              [":PACKAGE:", "!@/**", "!ui/**", ":BUN:", ":NODE:"],
               ":BLANK_LINE:",
-              "@/**",
+              ["@/**", "ui/**"],
               ":BLANK_LINE:",
               [":ALIAS:", ":PATH:"]
             ]

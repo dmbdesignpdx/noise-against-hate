@@ -1,11 +1,8 @@
-// Theirs
 import Link from "next/link";
 
-// Ours
-
-import { Button, buttonVariants } from "@/components/ui/button";
-import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
-import { Input } from "@/components/ui/input";
+import { Button, buttonVariants } from "ui/button";
+import { Field, FieldGroup, FieldLabel } from "ui/field";
+import { Input } from "ui/input";
 import { Id } from "@/constants";
 import { label } from "@/content/labels";
 import { cn } from "@/lib/utils";

@@ -1,11 +1,9 @@
-// Theirs
 import { startTransition, useActionState, useRef, useState } from "react";
 
-// Ours
 import { getBands } from "@/actions/get-bands";
-import { SearchForm } from "@/components//search-form";
-import { SearchResults } from "@/components//search-results";
 import { InfoBlock } from "@/components/info-block";
+import { SearchForm } from "@/components/search-form";
+import { SearchResults } from "@/components/search-results";
 import { Id } from "@/constants";
 import type { SearchedBand } from "@/types/main";
 

@@ -1,9 +1,7 @@
 "use client";
 
-// Theirs
 import { useState } from "react";
 
-// Ours
 import { SearchBody } from "@/components/search-body";
 
 export function Search() {

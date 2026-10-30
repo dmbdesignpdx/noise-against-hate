@@ -1,13 +1,5 @@
-// Ours
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Card, CardAction, CardContent, CardFooter, CardHeader, CardTitle } from "ui/card";
+import { Skeleton } from "ui/skeleton";
 
 export function CardSkeleton() {
   return (

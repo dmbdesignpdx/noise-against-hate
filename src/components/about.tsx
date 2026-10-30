@@ -1,4 +1,3 @@
-// Ours
 import { Abbreviate } from "@/components/abbreviate";
 import { TextLink } from "@/components/text-link";
 import { GITHUB, Id } from "@/constants";

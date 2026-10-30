@@ -1,10 +1,5 @@
-// Theirs
 import { useRef } from "react";
 
-// Ours
-import { BandCard } from "@/components/band-card";
-import { CardSkeleton } from "@/components/card-skeleton";
-import type { SearchState } from "@/components/search-body";
 import {
   Pagination,
   PaginationContent,
@@ -12,7 +7,10 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@/components/ui/pagination";
+} from "ui/pagination";
+import { BandCard } from "@/components/band-card";
+import { CardSkeleton } from "@/components/card-skeleton";
+import type { SearchState } from "@/components/search-body";
 import { PAGE_SIZE } from "@/constants";
 import { heading } from "@/content/copy";
 import { label } from "@/content/labels";

@@ -1,7 +1,6 @@
 // Theirs
 import Image from "next/image";
 
-// Ours
 import {
   Card,
   CardAction,
@@ -10,7 +9,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "ui/card";
 import type { SearchedBand } from "@/types/main";
 import { bandcampUrl } from "@/utils/bandcamp";
 

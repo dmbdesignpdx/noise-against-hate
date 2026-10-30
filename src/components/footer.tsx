@@ -1,9 +1,7 @@
 "use client";
 
-// Theirs
 import { useEffect, useState } from "react";
 
-// Ours
 import { TextLink } from "@/components/text-link";
 import { footer } from "@/content/copy";
 import { link } from "@/content/links";

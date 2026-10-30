@@ -1,11 +1,9 @@
-// Theirs
 import Link from "next/link";
 import { Suspense } from "react";
 
-// Ours
+import { buttonVariants } from "ui/button";
 import { BandList } from "@/components/band-list";
 import { InfoBlock } from "@/components/info-block";
-import { buttonVariants } from "@/components/ui/button";
 import { heading } from "@/content/copy";
 import { label } from "@/content/labels";
 import { cn } from "@/lib/utils";

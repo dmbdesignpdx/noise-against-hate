@@ -1,8 +1,6 @@
-// Theirs
 import type { PropsWithChildren } from "react";
 
-// Ours
-import { buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "ui/button";
 import { cn } from "@/lib/utils";
 
 interface Props extends PropsWithChildren {
