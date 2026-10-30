@@ -1,4 +1,3 @@
-// Theirs
 import Image from "next/image";
 
 import {
@@ -10,10 +9,17 @@ import {
   CardHeader,
   CardTitle,
 } from "ui/card";
+import { PLACEHOLDER } from "@/constants";
 import type { SearchedBand } from "@/types/main";
 import { bandcampUrl } from "@/utils/bandcamp";
 
-export function BandCard({ bandcamp, name, country, image, genres, id }: SearchedBand) {
+interface Props extends SearchedBand {
+  queue: number;
+}
+
+export function BandCard({ bandcamp, name, country, image, genres, id, queue }: Props) {
+  const eager = queue < 3;
+
   return (
     <Card aria-labelledby={bandcamp}>
       <CardHeader>
@@ -40,15 +46,17 @@ export function BandCard({ bandcamp, name, country, image, genres, id }: Searche
       <CardContent className="mbs-auto">
         <a
           className="block hover:before:opacity-20 relative before:transition-opacity before:duration-200 before:bg-purple-500 before:opacity-0 before:content-[''] before:block before:absolute before:inset-bs-0 before:inset-s-0 before:size-full before:pointer-events-none"
-          href={`https://${bandcamp}.bandcamp.com`}
+          href={bandcampUrl(bandcamp)}
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
             className="inline-full aspect-square object-cover"
-            src={image}
+            src={image || PLACEHOLDER}
             height={600}
             width={600}
+            loading={eager ? "eager" : undefined}
+            fetchPriority={eager ? "high" : undefined}
             alt=""
           />
         </a>

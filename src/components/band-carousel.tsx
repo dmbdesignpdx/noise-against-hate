@@ -12,6 +12,7 @@ import {
   CarouselPrevious,
 } from "ui/carousel";
 import { TextLink } from "@/components/text-link";
+import { PLACEHOLDER } from "@/constants";
 import type { SearchedBand } from "@/types/main";
 import { bandcampUrl } from "@/utils/bandcamp";
 
@@ -53,7 +54,7 @@ export function BandCarousel({ data }: Props) {
               >
                 <Image
                   className="size-full aspect-square object-cover"
-                  src={band.image}
+                  src={band.image || PLACEHOLDER}
                   height={600}
                   width={600}
                   alt=""

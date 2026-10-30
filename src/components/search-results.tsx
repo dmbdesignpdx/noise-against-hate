@@ -64,9 +64,10 @@ export function SearchResults({ state, loading, page, setPage }: Props) {
         {loading && !bands && skeletons.map(id => <CardSkeleton key={id} />)}
         {bands &&
           bands.length > 0 &&
-          visible.map(b => (
+          visible.map((b, i) => (
             <BandCard
               key={b.bandcamp + b.id}
+              queue={i}
               {...b}
             />
           ))}

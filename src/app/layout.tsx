@@ -1,8 +1,6 @@
-// Theirs
 import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 
-// Ours
 import { BgTexture } from "@/components/bg-texture";
 import { Footer } from "@/components/footer";
 import { Shero } from "@/components/shero";
