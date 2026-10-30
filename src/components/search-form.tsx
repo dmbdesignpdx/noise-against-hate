@@ -57,7 +57,7 @@ export function SearchForm({ clear, formAction, loading }: Props) {
               <Link
                 className={cn(buttonVariants({ variant: "link" }), "block-10 px-4 text-sm")}
                 href="/bands"
-                prefetch
+                prefetch={true}
               >
                 {label.fullList}
               </Link>

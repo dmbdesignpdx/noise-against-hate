@@ -8,6 +8,8 @@ import { heading } from "@/content/copy";
 import { label } from "@/content/labels";
 import { cn } from "@/lib/utils";
 
+export const ensureStatic = "prefetch";
+
 function BackLink() {
   return (
     <Link
