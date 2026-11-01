@@ -20,7 +20,12 @@ const bandcampLink = /bandcamp link/i;
 
 describe("BandCard", () => {
   test("renders its default content and state", () => {
-    render(<BandCard {...band} />);
+    render(
+      <BandCard
+        {...band}
+        queue={1}
+      />,
+    );
 
     const root = screen.getByRole("article", { name: band.name });
     const heading = screen.getByRole("heading", { name: band.name });
@@ -36,7 +41,12 @@ describe("BandCard", () => {
   });
 
   test("links to the band's Bandcamp page in a new tab", () => {
-    render(<BandCard {...band} />);
+    render(
+      <BandCard
+        {...band}
+        queue={1}
+      />,
+    );
 
     const link = screen.getByRole("link", { name: bandcampLink });
 

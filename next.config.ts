@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
   experimental: {
     inlineCss: true,
     agentFeedback: false,
+    useTypeScriptCli: true,
   },
   cacheComponents: true,
   partialPrefetching: true,

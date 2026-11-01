@@ -21,7 +21,7 @@ export function BandCard({ bandcamp, name, country, image, genres, id, queue }: 
   const eager = queue < 3;
 
   return (
-    <Card aria-labelledby={bandcamp}>
+    <Card aria-labelledby={bandcamp + id}>
       <CardHeader>
         <CardTitle>
           <h3
