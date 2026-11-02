@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
     inlineCss: true,
     agentFeedback: false,
     useTypeScriptCli: true,
+    globalNotFound: true,
   },
   cacheComponents: true,
   partialPrefetching: true,

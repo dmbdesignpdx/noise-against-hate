@@ -13,7 +13,7 @@ const mono = Space_Grotesk({
   display: "swap",
   variable: "--font-heading",
   subsets: ["latin"],
-  fallback: ["serif"],
+  fallback: ["monospace"],
   adjustFontFallback: false,
 });
 
@@ -21,7 +21,7 @@ const sans = Inter({
   display: "swap",
   variable: "--font-sans",
   subsets: ["latin"],
-  fallback: ["serif"],
+  fallback: ["sans-serif"],
   adjustFontFallback: false,
 });
 

@@ -11,6 +11,12 @@ export const info = {
   bandsFound: (count: number, tags: string) => `🤘 ${count} artists found for "${tags}".`,
 };
 
+export const notFound = {
+  code: "404",
+  title: "Page Not Found",
+  message: "Whatever you were looking for isn't here. Head back and find some bands instead.",
+};
+
 export const body = {
   artistList: "Full List of Artists",
 };
