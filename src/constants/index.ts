@@ -20,3 +20,4 @@ export const Path = {
 export const PAGE_SIZE = 12;
 export const GITHUB = "https://github.com/dmbdesignpdx/noise-against-hate";
 export const PLACEHOLDER = "https://picsum.photos/id/229/768";
+export const REDUCED_MOTION = "(prefers-reduced-motion: reduce)";
