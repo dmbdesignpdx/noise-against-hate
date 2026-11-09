@@ -104,3 +104,7 @@
 @utility type-copy {
   @apply font-sans font-normal leading-relaxed legible;
 }
+
+@utility highlight {
+  @apply before:content-[''] before:block before:bg-black before:w-full before:h-full before:absolute before:-z-1 before:p-3 before:box-content before:-top-3 before:-left-3;
+}
