@@ -12,6 +12,8 @@ const nextConfig: NextConfig = {
     agentFeedback: false,
     useTypeScriptCli: true,
     globalNotFound: true,
+    turbopackRustReactCompiler: true,
+    optimizePackageImports: ["@base-ui/react", "shadcn"],
   },
   cacheComponents: true,
   partialPrefetching: true,
