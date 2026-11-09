@@ -13,7 +13,7 @@ export function TextLink({ href, children }: Props) {
       className={cn(buttonVariants({ variant: "link" }), "text-lg px-0")}
       href={href}
       target="_blank"
-      rel="noopener noreferrer"
+      rel="noopener noreferrer nofollow"
     >
       {children}
     </a>

@@ -37,7 +37,7 @@ export function BandCard({ bandcamp, name, country, image, genres, id, queue }: 
             className="hover:underline text-indigo-400"
             href={bandcampUrl(bandcamp)}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
           >
             Bandcamp <span className="sr-only">Link</span>
           </a>
@@ -48,7 +48,7 @@ export function BandCard({ bandcamp, name, country, image, genres, id, queue }: 
           className="block hover:before:opacity-20 relative before:transition-opacity before:duration-200 before:bg-purple-500 before:opacity-0 before:content-[''] before:block before:absolute before:inset-bs-0 before:inset-s-0 before:size-full before:pointer-events-none"
           href={bandcampUrl(bandcamp)}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
         >
           <Image
             className="inline-full aspect-square object-cover"
