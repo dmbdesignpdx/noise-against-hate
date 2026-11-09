@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
 
@@ -6,9 +7,15 @@ import { BandList } from "@/components/band-list";
 import { InfoBlock } from "@/components/info-block";
 import { heading } from "@/content/copy";
 import { label } from "@/content/labels";
+import { bandsMetaData } from "@/content/meta";
 import { cn } from "@/lib/utils";
 
 export const ensureStatic = "prefetch";
+
+export const metadata: Metadata = {
+  title: bandsMetaData.title,
+  description: bandsMetaData.description,
+};
 
 function BackLink() {
   return (

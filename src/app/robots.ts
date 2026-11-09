@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { Path } from "@/constants";
+import { PATH } from "@/constants";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "",
     },
-    sitemap: `${Path.HOME.origin}/sitemap.xml`,
+    sitemap: `${PATH.home.origin}/sitemap.xml`,
   };
 }

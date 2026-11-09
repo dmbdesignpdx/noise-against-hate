@@ -1,6 +1,4 @@
-"use client";
-
-import { useEffect, useState } from "react";
+import { Suspense } from "react";
 
 import { TextLink } from "@/components/text-link";
 import { footer } from "@/content/copy";
@@ -8,13 +6,12 @@ import { link } from "@/content/links";
 
 const links = Object.values(link);
 
+async function CurrentYear() {
+  "use cache";
+  return <span>{new Date().getFullYear()}</span>;
+}
+
 export function Footer() {
-  const [year, setYear] = useState(1985);
-
-  useEffect(() => {
-    setYear(new Date().getFullYear());
-  }, []);
-
   return (
     <footer className="bg-card py-12 [content-visibility:auto] [contain-intrinsic-size:auto_300px]">
       <div className="wrapper grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -30,7 +27,14 @@ export function Footer() {
           ))}
         </address>
         <p className="md:col-[1/2] md:row-[3/4]">
-          <small>{footer.copyright(year)}</small>
+          <small>
+            {footer.copyright} &copy;&nbsp;
+            <Suspense fallback={<span>1985</span>}>
+              <CurrentYear />
+            </Suspense>
+            {". "}
+            {footer.disclaimer}
+          </small>
         </p>
         <p className="md:col-[2/3] md:row-[1/2] md:justify-self-end">{footer.callout}</p>
       </div>

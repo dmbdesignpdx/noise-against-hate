@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button, buttonVariants } from "ui/button";
 import { Field, FieldGroup, FieldLabel } from "ui/field";
 import { Input } from "ui/input";
-import { Id } from "@/constants";
+import { ID } from "@/constants";
 import { label } from "@/content/labels";
 import { cn } from "@/lib/utils";
 
@@ -16,7 +16,7 @@ interface Props {
 export function SearchForm({ clear, formAction, loading }: Props) {
   return (
     <search
-      id={Id.SEARCH}
+      id={ID.search}
       className="mx-auto scroll-mbs-20"
     >
       <form action={formAction}>
@@ -24,16 +24,16 @@ export function SearchForm({ clear, formAction, loading }: Props) {
           <Field>
             <FieldLabel
               className="text-sm"
-              htmlFor={Id.TAGS}
+              htmlFor={ID.tags}
             >
               {label.name}
             </FieldLabel>
             <div className="gap-4 flex flex-col sm:flex-row">
               <Input
                 className="block-10 text-sm"
-                id={Id.TAGS}
+                id={ID.tags}
                 type="search"
-                name={Id.TAGS}
+                name={ID.tags}
                 aria-autocomplete="none"
                 autoComplete="off"
                 placeholder={label.placeholder}

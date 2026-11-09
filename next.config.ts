@@ -1,11 +1,11 @@
 import type { NextConfig } from "next";
 
-import { Origin } from "@/constants";
+import { ORIGIN } from "@/constants";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
-    remotePatterns: [new URL(`${Origin.IMAGES}/**`), new URL(`${Origin.PICSUM}/**`)],
+    remotePatterns: [new URL(`${ORIGIN.images}/**`), new URL(`${ORIGIN.picsum}/**`)],
   },
   experimental: {
     inlineCss: true,

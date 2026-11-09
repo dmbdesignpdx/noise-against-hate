@@ -1,17 +1,17 @@
 import { Abbreviate } from "@/components/abbreviate";
 import { TextLink } from "@/components/text-link";
-import { GITHUB, Id } from "@/constants";
+import { GITHUB, ID } from "@/constants";
 import { heading } from "@/content/copy";
 
 export function About() {
   return (
     <section
       className="wrapper contain-layout"
-      aria-labelledby={Id.ABOUT}
+      aria-labelledby={ID.about}
     >
       <div className="flex flex-col md:px-12 gap-6">
         <h2
-          id={Id.ABOUT}
+          id={ID.about}
           className="sr-only"
         >
           {heading.about}

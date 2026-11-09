@@ -1,17 +1,17 @@
 import type { MetadataRoute } from "next";
 
-import { Path } from "@/constants";
+import { PATH } from "@/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: Path.HOME.href,
+      url: PATH.home.href,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: Path.BANDS.href,
+      url: PATH.bands.href,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,

@@ -1,7 +1,9 @@
 export const footer = {
   author: "Made with 🌈🦄 by Daniel Blake.",
   callout: "Fuck NSBM. Fuck Fascism.",
-  copyright: (year: number) => `Copyright ${year}. All rights reserved.`,
+  copyright: "Copyright",
+  disclaimer:
+    "All rights reserved. Other trademarks and brands are the property of their respective owners.",
 };
 
 export const info = {

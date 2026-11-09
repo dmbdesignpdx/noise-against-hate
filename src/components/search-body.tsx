@@ -4,7 +4,7 @@ import { getBands } from "@/actions/get-bands";
 import { InfoBlock } from "@/components/info-block";
 import { SearchForm } from "@/components/search-form";
 import { SearchResults } from "@/components/search-results";
-import { Id } from "@/constants";
+import { ID } from "@/constants";
 import type { SearchedBand } from "@/types/main";
 
 interface SearchFormProps {
@@ -29,7 +29,7 @@ export function SearchBody({ clear }: SearchFormProps) {
   const $search = useRef<HTMLDivElement>(null);
 
   async function searchBands(prev: SearchState, formData: FormData): Promise<SearchState> {
-    const query = String(formData.get(Id.TAGS) ?? "").trim();
+    const query = String(formData.get(ID.tags) ?? "").trim();
 
     if (!query) return prev;
 

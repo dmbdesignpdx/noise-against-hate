@@ -1,4 +1,4 @@
-import { Origin } from "@/constants";
+import { ORIGIN } from "@/constants";
 
 export const metaData = {
   title: "Noise Against Hate",
@@ -7,6 +7,11 @@ export const metaData = {
   author: {
     name: "Daniel Blake",
     email: "daniel@danielblake.dev",
-    website: Origin.AUTHOR,
+    website: ORIGIN.author,
   },
+};
+
+export const bandsMetaData = {
+  title: "List of Bands",
+  description: "A full list of bands that have been featured on Noise Against Hate.",
 };

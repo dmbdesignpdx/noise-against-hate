@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 
 import { buttonVariants } from "ui/button";
-import { Path } from "@/constants";
+import { PATH } from "@/constants";
 import { notFound } from "@/content/copy";
 import { label } from "@/content/labels";
 import { metaData } from "@/content/meta";
@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: Path.HOME.origin,
+  metadataBase: PATH.home.origin,
   title: `${notFound.title} - ${metaData.title}`,
   description: notFound.message,
 };

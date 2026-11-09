@@ -1,8 +1,8 @@
-import { Origin } from "@/constants";
+import { ORIGIN } from "@/constants";
 
 export const link = {
   website: {
-    url: Origin.AUTHOR,
+    url: ORIGIN.author,
     label: "website",
   },
   email: {

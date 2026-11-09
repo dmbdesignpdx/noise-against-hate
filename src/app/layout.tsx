@@ -4,7 +4,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import { BgTexture } from "@/components/bg-texture";
 import { Footer } from "@/components/footer";
 import { Shero } from "@/components/shero";
-import { Path } from "@/constants";
+import { PATH } from "@/constants";
 import { metaData } from "@/content/meta";
 import { cn } from "@/lib/utils";
 import "./globals.css";
@@ -26,9 +26,20 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: Path.HOME.origin,
-  title: metaData.title,
+  metadataBase: PATH.home.origin,
+  alternates: {
+    canonical: PATH.home.href,
+  },
+  title: {
+    default: metaData.title,
+    template: `%s | ${metaData.title}`,
+  },
   description: metaData.description,
+  authors: [{ name: metaData.author.name, url: metaData.author.website }],
+  formatDetection: {
+    telephone: false,
+  },
+  category: "music",
 };
 
 export const viewport: Viewport = {

@@ -1,20 +1,20 @@
-export enum Id {
-  TAGS = "tags-input",
-  SEARCH = "search-form",
-  ABOUT = "about-title",
-}
+export const ID = {
+  tags: "tags-input",
+  search: "search-form",
+  about: "about-title",
+} as const;
 
-export enum Origin {
-  DEV = "http://localhost:3000",
-  SITE = "https://noise-against-hate.netlify.app",
-  AUTHOR = "https://danielblake.dev",
-  IMAGES = "https://f4.bcbits.com",
-  PICSUM = "https://picsum.photos",
-}
+export const ORIGIN = {
+  dev: "http://localhost:3000",
+  site: "https://noiseagainsthate.com",
+  author: "https://danielblake.dev",
+  images: "https://f4.bcbits.com",
+  picsum: "https://picsum.photos",
+} as const;
 
-export const Path = {
-  HOME: new URL(Origin.SITE),
-  BANDS: new URL("bands", Origin.SITE),
+export const PATH = {
+  home: new URL(ORIGIN.site),
+  bands: new URL("bands", ORIGIN.site),
 } as const;
 
 export const PAGE_SIZE = 12;
