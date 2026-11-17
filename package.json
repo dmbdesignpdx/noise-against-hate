@@ -1,7 +1,7 @@
 {
   "name": "noise-against-hate",
   "description": "A collection of extreme metal artists, and other genres, who are against hate, discrimination, and oppression.",
-  "version": "1.1.7",
+  "version": "1.2.2",
   "private": true,
   "author": {
     "name": "Daniel Blake",
@@ -15,6 +15,7 @@
     "format": "biome format --write",
     "test": "bun test --changed",
     "test:watch": "bun test --watch",
+    "test:ab": "playwright test",
     "comp": "bun -b run ./scripts/create-component"
   },
   "dependencies": {
@@ -26,7 +27,7 @@
     "embla-carousel-react": "^8.6.0",
     "gradflow": "^0.4.0",
     "lucide-react": "^1.66.0",
-    "next": "16.4.3",
+    "next": "16.4.6",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "server-only": "^0.0.1",
@@ -36,6 +37,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.6.4",
     "@happy-dom/global-registrator": "^21.0.4",
+    "@playwright/test": "^1.65.0",
     "@tailwindcss/turbopack": "^4",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
@@ -49,7 +51,7 @@
     "tailwindcss": "^4",
     "typescript": "^7.0.2"
   },
-  "packageManager": "bun@1.4.2",
+  "packageManager": "bun@1.4.4",
   "ignoreScripts": [
     "sharp",
     "unrs-resolver"
