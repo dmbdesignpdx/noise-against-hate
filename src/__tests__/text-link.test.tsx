@@ -21,6 +21,6 @@ describe("TextLink", () => {
     const link = screen.getByRole("link", { name: "Example" });
 
     expect(link).toHaveAttribute("target", "_blank");
-    expect(link).toHaveAttribute("rel", "noopener noreferrer");
+    expect(link).toHaveAttribute("rel", "noopener noreferrer nofollow");
   });
 });
