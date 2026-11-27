@@ -1,6 +1,6 @@
 "use client";
 
-import { GradFlow } from "gradflow";
+import { Aurora, CRTScreen, Shader, VHS } from "shaders/react";
 
 import { useMotionPreference } from "@/hooks/use-reduced-motion";
 import { getHexColor } from "@/utils/colors";
@@ -9,20 +9,26 @@ export function BgTexture() {
   const prefersNoMotion = useMotionPreference();
 
   return (
-    <div className="absolute inset-0 block-[60svh] opacity-90 -z-1 pointer-events-none">
-      <GradFlow
-        className="mask-[linear-gradient(to_bottom,transparent,black_40%)] scale-[-1]"
-        paused={prefersNoMotion}
-        config={{
-          type: "horizon",
-          color1: getHexColor("primary"),
-          color2: getHexColor("background"),
-          color3: getHexColor("accent"),
-          speed: 1.5,
-          scale: 1.2,
-          noise: 1,
-        }}
-      />
+    <div className="contain-paint absolute isolate overflow-hidden inset-0 block-svb opacity-90 -z-1 pointer-events-none mask-[linear-gradient(to_top,transparent,black_40%)]">
+      {!prefersNoMotion && (
+        <Shader
+          colorSpace="srgb"
+          className="inline-full block-full"
+        >
+          <Aurora
+            colorA={getHexColor("indigo")}
+            colorB={getHexColor("purple", 600)}
+            colorC={getHexColor("sky", 600)}
+            colorSpace="oklab"
+            height={100}
+          />
+          <CRTScreen
+            colorShift={1.5}
+            vignetteRadius={0.25}
+          />
+          <VHS />
+        </Shader>
+      )}
     </div>
   );
 }

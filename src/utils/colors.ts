@@ -1,18 +1,9 @@
 import { colordx } from "@colordx/core";
 import colors from "tailwindcss/colors";
 
-type Tokens = "primary" | "secondary" | "accent" | "background";
+type Color = keyof Omit<typeof colors, "inherit" | "current" | "transparent" | "black" | "white">;
+type Shade = 50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | 950;
 
-/**
- * @see src/app/globals.css
- */
-const color: Record<Tokens, string> = {
-  primary: colors.purple[600],
-  secondary: colors.zinc[100],
-  accent: colors.sky[600],
-  background: colors.neutral[950],
-};
-
-export function getHexColor(token: Tokens) {
-  return colordx(color[token]).toHex();
+export function getHexColor(color: Color, shade?: Shade) {
+  return colordx(colors[color][shade || 500]).toHex();
 }
